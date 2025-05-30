@@ -13,3 +13,9 @@ html, body{
 #tasklist::-webkit-scrollbar{
     display: none;
 }
+
+@layer utilities {
+  input[type="date"]::-webkit-datetime-edit {
+    color: #9ca3af; /* gray-400 */
+  }
+}
