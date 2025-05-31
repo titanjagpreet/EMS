@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function TaskData() {
+export default function TaskData({data}) {
 
     return (
         <>
@@ -9,7 +9,7 @@ export default function TaskData() {
                 <div className='!py-5 !px-10 w-[45%] bg-[#478AE4] rounded-2xl'>
 
                     <h2 className='text-3xl text-white font-semibold'>
-                        0
+                        {data.taskCounts.newTask}
                     </h2>
 
                     <h3 className='text-xl text-white font-medium '>
@@ -20,33 +20,33 @@ export default function TaskData() {
                 <div className='!py-5 !px-10 w-[45%] bg-[#A9C070] rounded-2xl'>
 
                     <h2 className='text-3xl text-white font-semibold'>
-                        0
+                        {data.taskCounts.completedTask}
                     </h2>
 
                     <h3 className='text-xl text-white font-medium '>
-                        New Task
+                        Completed Task
                     </h3>
                 </div>
 
                 <div className='!py-5 !px-10 w-[45%] bg-[#F5CF5F] rounded-2xl'>
 
                     <h2 className='text-3xl text-white font-semibold'>
-                        0
+                        {data.taskCounts.acceptedTask}
                     </h2>
 
                     <h3 className='text-xl text-white font-medium '>
-                        New Task
+                        Accepted Task
                     </h3>
                 </div>
 
                 <div className='!py-5 !px-10 w-[45%] bg-[#C7734E] rounded-2xl'>
 
                     <h2 className='text-3xl text-white font-semibold'>
-                        0
+                        {data.taskCounts.failedTask}
                     </h2>
 
                     <h3 className='text-xl text-white font-medium '>
-                        New Task
+                        Failed Task
                     </h3>
                 </div>
 

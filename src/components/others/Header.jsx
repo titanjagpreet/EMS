@@ -1,14 +1,13 @@
 import React from 'react'
 
-export default function Header() {
-
+export default function Header({data, role}) {
     return (
         <>
             <div className='flex items-end justify-between '>
                 <h1 className='text-white text-2xl '>
                     Hello <br /> 
                     <span className='text-3xl font-semibold'>
-                        Titan 💀
+                        {role === 'admin' ? 'Admin' : `${data?.firstName}`} 👋
                     </span>
                 </h1>
 
