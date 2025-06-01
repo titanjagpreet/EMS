@@ -11,15 +11,16 @@ export default function App() {
   const [loggedInUserData, setLoggedInUserData] = useState(null);
   const authData = useContext(AuthContext);
 
-  // useEffect(() => {
-  //   if (authData) {
-  //     const loggedInUser = localStorage.getItem('loggedInUser');
+  useEffect(()=>{
+    const loggedInUser = localStorage.getItem('loggedInUser')
+    
+    if(loggedInUser){
+      const userData = JSON.parse(loggedInUser)
+      setUser(userData.role)
+      setLoggedInUserData(userData.data)
+    }
 
-  //     if(loggedInUser){
-  //       setUser(loggedInUser.role);
-  //     }
-  //   }
-  // }, [authData]);
+  },[])
   
 
   const handleLogin = (email, password) => {
