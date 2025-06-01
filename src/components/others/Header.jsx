@@ -1,6 +1,12 @@
 import React from 'react'
 
 export default function Header({data, role}) {
+
+    function logOutUser() {
+        localStorage.setItem('loggedInUser','');
+        window.location.reload();
+    }
+
     return (
         <>
             <div className='flex items-end justify-between '>
@@ -11,7 +17,7 @@ export default function Header({data, role}) {
                     </span>
                 </h1>
 
-                <button className='text-white text-lg bg-red-500 !px-5 !py-2 rounded-xl cursor-pointer '>
+                <button className='text-white text-lg bg-red-500 !px-5 !py-2 rounded-xl cursor-pointer ' onClick={logOutUser}>
                     Logout
                 </button>
             </div>
