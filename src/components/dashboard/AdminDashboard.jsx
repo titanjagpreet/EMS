@@ -7,7 +7,7 @@ export default function AdminDashboard({data}) {
 
     return (
         <>
-            <div className='!p-10 bg-[#111111] h-screen '>
+            <div className='!px-10 !py-8 bg-[#111111] h-screen '>
                 <Header data={data} role='admin' />
                 <CreateTask data={data} />
                 <AllTask data={data} />
