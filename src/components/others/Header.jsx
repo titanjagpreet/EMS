@@ -1,10 +1,10 @@
 import React from 'react'
 
-export default function Header({data, role}) {
+export default function Header(props) {
 
     function logOutUser() {
         localStorage.setItem('loggedInUser','');
-        window.location.reload();
+        props.changeUser('');
     }
 
     return (
@@ -13,7 +13,7 @@ export default function Header({data, role}) {
                 <h1 className='text-white text-2xl '>
                     Hello <br /> 
                     <span className='text-3xl font-semibold'>
-                        {role === 'admin' ? 'Admin' : `${data?.firstName}`} 👋
+                        {props.role === 'admin' ? 'Admin' : `${props.data?.firstName}`} 👋
                     </span>
                 </h1>
 
