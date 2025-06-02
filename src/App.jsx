@@ -45,19 +45,11 @@ export default function App() {
     }
   }
 
-
-  // useEffect(() => {
-  //   setLocalStorage()
-  //   getLocalStorage()
-
-  // }, []);
-
   return (
     <>
       {!user ? <Login handleLogin={handleLogin} /> : ''}
-      {user == 'admin' ? <AdminDashboard data={authData.admins}/> : (user == 'employee' ? <EmployeeDashboard data={loggedInUserData} /> : null)}
-      {/* <EmployeeDashboard /> */}
-      {/* <AdminDashboard/> */}
+
+      {user == 'admin' ? <AdminDashboard role='admin' changeUser={setUser} data={authData.admins}/> : (user == 'employee' ? <EmployeeDashboard  role='employee' changeUser={setUser} data={loggedInUserData} /> : null)}
     </>
   )
 }
