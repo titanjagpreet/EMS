@@ -6,7 +6,7 @@ export default function TaskData({data}) {
         <>
             <div className='flex !mt-10 justify-between gap-5 screen'>
 
-                <div className='!py-5 !px-10 w-[45%] bg-[#478AE4] rounded-2xl'>
+                <div className='!py-5 !px-10 w-[45%] bg-linear-to-r from-cyan-500 to-blue-500 rounded-2xl'>
 
                     <h2 className='text-3xl text-white font-semibold'>
                         {data.taskCounts.newTask}
@@ -17,7 +17,7 @@ export default function TaskData({data}) {
                     </h3>
                 </div>
 
-                <div className='!py-5 !px-10 w-[45%] bg-[#A9C070] rounded-2xl'>
+                <div className='!py-5 !px-10 w-[45%] bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-2xl'>
 
                     <h2 className='text-3xl text-white font-semibold'>
                         {data.taskCounts.completedTask}
@@ -28,7 +28,7 @@ export default function TaskData({data}) {
                     </h3>
                 </div>
 
-                <div className='!py-5 !px-10 w-[45%] bg-[#F5CF5F] rounded-2xl'>
+                <div className='!py-5 !px-10 w-[45%] bg-linear-to-bl from-violet-500 to-fuchsia-500 rounded-2xl'>
 
                     <h2 className='text-3xl text-white font-semibold'>
                         {data.taskCounts.acceptedTask}
@@ -39,7 +39,7 @@ export default function TaskData({data}) {
                     </h3>
                 </div>
 
-                <div className='!py-5 !px-10 w-[45%] bg-[#C7734E] rounded-2xl'>
+                <div className='!py-5 !px-10 w-[45%] bg-gradient-to-r from-red-500 to-orange-500 rounded-2xl'>
 
                     <h2 className='text-3xl text-white font-semibold'>
                         {data.taskCounts.failedTask}
