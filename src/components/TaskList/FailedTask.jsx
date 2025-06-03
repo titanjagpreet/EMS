@@ -4,7 +4,7 @@ export default function FailedTask({data}) {
 
     return (
         <>
-            <div className='flex-shrink-0 h-full w-[300px] !p-5 bg-yellow-400 rounded-xl'>
+            <div className='flex-shrink-0 h-full w-[300px] !p-5 bg-gradient-to-r from-amber-200 to-yellow-500 rounded-xl'>
                 <div className='flex justify-between items-center'>
                     <h3 className='bg-red-600 text-sm !px-3 !py-1 rounded'>{data.category}</h3>
                     <h4 className='text-sm'>{data.taskDate}</h4>

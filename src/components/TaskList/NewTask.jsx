@@ -4,7 +4,7 @@ export default function NewTask({ data }) {
 
     return (
         <>
-            <div className='flex-shrink-0 h-full w-[300px] !p-5 bg-green-400 rounded-xl'>
+            <div className='flex-shrink-0 h-full w-[300px] !p-5 bg-gradient-to-tl from-[#16a34a] via-[#4ade80] to-[#bbf7d0] rounded-xl'>
                 <div className='flex justify-between items-center'>
                     <h3 className='bg-red-600 text-sm !px-3 !py-1 rounded'>{data.category}</h3>
                     <h4 className='text-sm'>{data.taskDate}</h4>
