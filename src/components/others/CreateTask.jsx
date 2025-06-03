@@ -33,6 +33,7 @@ export default function CreateTask() {
         data.forEach(function (elem) {
             if (assignTo === elem.firstName) {
                 elem.tasks.push(task);
+                elem.taskCounts.newTask = elem.taskCounts.newTask + 1;
                 found = true;
             }
         });
